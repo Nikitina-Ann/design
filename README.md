@@ -69,4 +69,4 @@
 5. Клиент игнорирует специальное предложение, процесс завершается.
 
 #4. Разработка статической объектной модели предметной области 
-[Диаграмма классов] (https://github.com/Nikitina-Ann/design/blob/master/DiagrClass.PNG)
+[Диаграмма классов] (https://github.com/Nikitina-Ann/design/blob/master/ClassDiagr.png)
