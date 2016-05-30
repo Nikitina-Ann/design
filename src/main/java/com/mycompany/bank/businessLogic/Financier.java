@@ -70,10 +70,9 @@ public class Financier {
         bid.setResponseFinancier(responseFinancier);
     }
     
-    public void generateSpecialOffer(int sum, int persent, int time){
-        SpecialOffer specialOffer=new SpecialOffer(sum, persent, time);
+    /*public void generateSpecialOffer(int sum, int persent, int time, int id){
+        SpecialOffer specialOffer=new SpecialOffer(sum, persent, time,  id);
         this.specialOffers.add(specialOffer);
-    }
-    
-        
+    }*/
+     
 }

@@ -15,6 +15,9 @@ public class ResponseFinancier {
     public ResponseFinancier(Boolean answer) {
         this.answer = answer;
     }
+    public ResponseFinancier() {
+        this.answer = null;
+    }
     public ResponseFinancier(Boolean answer, int persent, int time) {
         this.answer = answer;
         this.persent = persent;

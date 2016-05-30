@@ -16,18 +16,23 @@ public class Client {
     private String name;
     private int rating;
     private int revenue;
-    private ArrayList<Bid> bids;
-    private ArrayList<SpecialOffer> specialOffers;
-    private ArrayList<Manager> managers;
+    private List<SpecialOffer> specialOffers;
     public Client(int id, String name, int rating,int revenue){
         this.id =id;
         this.name = name;
         this.rating = rating;
         this.revenue = revenue;
-        this.bids = new ArrayList<Bid>();
         this.specialOffers = new ArrayList<SpecialOffer>();
-        this.managers = new ArrayList<Manager>();
     }
+    
+    public Client(int id, String name, int rating,int revenue, List<SpecialOffer> specialOffers){
+        this.id =id;
+        this.name = name;
+        this.rating = rating;
+        this.revenue = revenue;
+        this.specialOffers = specialOffers;
+    }
+    
     public int getRating() {
         return this.rating;
     }
@@ -45,7 +50,7 @@ public class Client {
         this.revenue = revenue;
     }
 
-    public ArrayList<SpecialOffer> getSpecialOffers() {
+    public List<SpecialOffer> getSpecialOffers() {
         return specialOffers;
     }
 
@@ -68,36 +73,10 @@ public class Client {
     public void setId(int id) {
         this.id = id;
     }
-
-
-    public ArrayList<Bid> getBids() {
-        return this.bids;
-    }
     
-    public Bid getBid(int index) {
-        return this.bids.get(index);
-    }
-    
-    public ArrayList<Manager> getManagers() {
-        return this.managers;
-    }
-
+   
     public void addSpecialOffer(SpecialOffer specialOffer){
         this.specialOffers.add(specialOffer);
-    }
-    
-    public void sendBid(Bid bid, Manager manager){
-        if (!this.bids.contains(bid)) 
-            this.bids.add(bid);
-        if ( !this.managers.contains(manager)) 
-            this.managers.add(manager);
-        manager.addClient(this);
-    }
-    public void addBid(Bid bid){
-        this.bids.add(bid);
-    }
-     public void addBidArray(List<Bid> bid){
-        this.bids.addAll(bid);
     }
     
     public void setResponseClient(Bid bid, Boolean responseClient) {
