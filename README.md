@@ -121,14 +121,14 @@
 #Реализация слоя хранения данных
 
 В качестве СУБД было решено использовать MySQL в силу её удобства и бесплатности. Lля слоя хранения был создан отдельный пакет (services), в котором были созданы подпакеты (по аналогии с бизнесс-логикой). В состав пакета входят следующие классы:
-* BidService - класс, отвечающий за обращение к таблице с завками на получение кредита    
-* RestrBidService - класс, отвечающий за обращение к таблице я заявками на реструктуризацию кредита      
-* ClientService - класс, отвечающий за обращение к таблице с клиентами   
-* ManagerService - класс, отвечающий за обращение к таблице с менеджерами
-* FinancierService - класс, отвечающий за обращение к таблице с финансистами   
-* SpecialOfferService - класс, отвечающий за обращение к таблице со специальными предложениями     
-* ResponceFinancierService - класс, отвечающий за обращение к таблице с ответами финансиста     
-* AgreementService -класс, отвечающий за обращение к таблице с договорами       
+* [BidService](https://github.com/Nikitina-Ann/design/blob/master/Bank/src/main/java/com/mycompany/bank/db/BidService.java) - класс, отвечающий за обращение к таблице с завками на получение кредита    
+* [RestrBidService] (https://github.com/Nikitina-Ann/design/blob/master/Bank/src/main/java/com/mycompany/bank/db/RestrBidService.java) - класс, отвечающий за обращение к таблице я заявками на реструктуризацию кредита      
+* [ClientService] (https://github.com/Nikitina-Ann/design/blob/master/Bank/src/main/java/com/mycompany/bank/db/ClientService.java) - класс, отвечающий за обращение к таблице с клиентами   
+* [ManagerService](https://github.com/Nikitina-Ann/design/blob/master/Bank/src/main/java/com/mycompany/bank/db/ManagerService.java)  - класс, отвечающий за обращение к таблице с менеджерами
+* [FinancierService](https://github.com/Nikitina-Ann/design/blob/master/Bank/src/main/java/com/mycompany/bank/db/FinancierService.java)  - класс, отвечающий за обращение к таблице с финансистами   
+* [SpecialOfferService] (https://github.com/Nikitina-Ann/design/blob/master/Bank/src/main/java/com/mycompany/bank/db/SpecialOfferService.java) - класс, отвечающий за обращение к таблице со специальными предложениями     
+* [ResponceFinancierService](https://github.com/Nikitina-Ann/design/blob/master/Bank/src/main/java/com/mycompany/bank/db/ResponceFinancierService.java)  - класс, отвечающий за обращение к таблице с ответами финансиста     
+* [AgreementService](https://github.com/Nikitina-Ann/design/blob/master/Bank/src/main/java/com/mycompany/bank/db/AgreementService.java)  -класс, отвечающий за обращение к таблице с договорами       
 
 Так же были созданы соответствующие таблицы, для хранения сущностей.
 
@@ -145,13 +145,13 @@
 #Реализация слоя представления
 
 Для классов, описывающих слой представления были создан отдельный пакет (gui). В пакете реализованы следующие классы:
-*   StartFrame - начально окно    
-*   ClientFrame - окно клиента  
-*   FinancierFrame - окно финансиста   
-*   ManagerFrame - окно менеджера   
-*   RegiastrationFrame -окно регистрации   
-*   CreateNewBidFrame - окно создания новой заявки на получение кредита (вызывается из окна клиента)   
-*   CreateSpecialOfferFrame - окно создания нового специльного предложения (вызывается из окно финансиста)       
+*   [StartFrame](https://github.com/Nikitina-Ann/design/blob/master/Bank/src/main/java/com/mycompany/bank/gui/StartFrame.java) - начально окно    
+*   [ClientFrame](https://github.com/Nikitina-Ann/design/blob/master/Bank/src/main/java/com/mycompany/bank/gui/ClientFrame.java) - окно клиента  
+*   [FinancierFrame](https://github.com/Nikitina-Ann/design/blob/master/Bank/src/main/java/com/mycompany/bank/gui/FinancierFrame.java) - окно финансиста   
+*   [ManagerFrame](https://github.com/Nikitina-Ann/design/blob/master/Bank/src/main/java/com/mycompany/bank/gui/ManagerFrame.java) - окно менеджера   
+*   [RegiastrationFrame](https://github.com/Nikitina-Ann/design/blob/master/Bank/src/main/java/com/mycompany/bank/gui/RegiastrationFrame.java) -окно регистрации   
+*   [CreateNewBidFrame](https://github.com/Nikitina-Ann/design/blob/master/Bank/src/main/java/com/mycompany/bank/gui/CreateNewBidFrame.java) - окно создания новой заявки на получение кредита (вызывается из окна клиента)   
+*   [CreateSpecialOfferFrame](https://github.com/Nikitina-Ann/design/blob/master/Bank/src/main/java/com/mycompany/bank/gui/CreateSpecialOfferFrame.java)- окно создания нового специльного предложения (вызывается из окно финансиста)       
 
 На рисунках ниже представлены скриншоты графического интерфейса.    
 [Начальное окно] (https://github.com/Nikitina-Ann/design/blob/master/pngFrame/StartFrame.png)   
