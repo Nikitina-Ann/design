@@ -96,22 +96,22 @@
 
 Так же был создан отдельный пакет для фасада (facade), в котором содержатся классы:
 
-* BidFasade - фасад для работы с заявками на получение кредтита      
-* RestrBidFasade -  фасад для работы с заявками на реструктуризацию кредита          
-* ClientFasade -  фасад для работы с клиентами     
-* ManagerFasade -  фасад для работы с менеджерами    
-* FinancierFasade -  фасад для работы с финансистами      
-* SpecialOfferFasade -  фасад для работы со специальнми предложениями       
+* [BidFasade](https://github.com/Nikitina-Ann/design/blob/master/Bank/src/main/java/com/mycompany/bank/fasade/BidFasade.java) - фасад для работы с заявками на получение кредтита      
+* [RestrBidFasade](https://github.com/Nikitina-Ann/design/blob/master/Bank/src/main/java/com/mycompany/bank/fasade/RestrBidFasade.java) -  фасад для работы с заявками на реструктуризацию кредита          
+* [ClientFasade](https://github.com/Nikitina-Ann/design/blob/master/Bank/src/main/java/com/mycompany/bank/fasade/ClientFasade.java) -  фасад для работы с клиентами     
+* [ManagerFasade](https://github.com/Nikitina-Ann/design/blob/master/Bank/src/main/java/com/mycompany/bank/fasade/ManagerFasade.java) -  фасад для работы с менеджерами    
+* [FinancierFasade](https://github.com/Nikitina-Ann/design/blob/master/Bank/src/main/java/com/mycompany/bank/fasade/FinancierFasade.java) -  фасад для работы с финансистами      
+* [SpecialOfferFasade](https://github.com/Nikitina-Ann/design/blob/master/Bank/src/main/java/com/mycompany/bank/fasade/SpecialOfferFasade.java) -  фасад для работы со специальнми предложениями       
 
 #Тестирование
 
 Для проверки работоспособности бизнесс-логики были написаны JUnit - тесты. Так как на этапе создания бизнесс-логики, слой хранения еще не был реализован, то был созданы репозитории, эмулирующие работу слоя хранения. Для этого был создан отдельный пакет repository, пакет включает следующие классы:     
-* BidRepo- репозиторий для работы с заявками на получение кредита      
-* RestrBidRepo-   репозиторий  для работы с заявками на реструктуризацию кредита          
-* ClientRepo -   репозиторий  для работы с клиентами     
-* ManagerRepo -   репозиторий  для работы с менеджерами    
-* FinancierRepo -   репозиторий  для работы с финансистами      
-* SpecialOfferRepo -   репозиторий  для работы со специальнми предложениями       
+* [BidRepo](https://github.com/Nikitina-Ann/design/blob/master/Bank/src/main/java/com/mycompany/bank/repository/BidRepo.java)- репозиторий для работы с заявками на получение кредита      
+* [RestrBidRepo](https://github.com/Nikitina-Ann/design/blob/master/Bank/src/main/java/com/mycompany/bank/repository/RestrBidRepo.java)-   репозиторий  для работы с заявками на реструктуризацию кредита          
+* [ClientRepo](https://github.com/Nikitina-Ann/design/blob/master/Bank/src/main/java/com/mycompany/bank/repository/ClientRepo.java) -   репозиторий  для работы с клиентами     
+* [ManagerRepo](https://github.com/Nikitina-Ann/design/blob/master/Bank/src/main/java/com/mycompany/bank/repository/ManagerRepo.java) -   репозиторий  для работы с менеджерами    
+* [FinancierRepo](https://github.com/Nikitina-Ann/design/blob/master/Bank/src/main/java/com/mycompany/bank/repository/FinancierRepo.java) -   репозиторий  для работы с финансистами      
+* [SpecialOfferRepo](https://github.com/Nikitina-Ann/design/blob/master/Bank/src/main/java/com/mycompany/bank/repository/SpecialOfferRepo.java) -   репозиторий  для работы со специальнми предложениями       
 
 Используя данные репозитории были написаны JUnit тесты, реализующие возможные варианты использования.
 
