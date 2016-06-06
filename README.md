@@ -84,15 +84,15 @@
 
 Для классов слоя бизнесс-логики был создан отдельный пакет (businessLogic).
 Пакет содержит следующие классы    
-* AllBid - класс, описывающий заявки всех типов   
-* Bid - класс, описывающий на получение кредита    
-* RestrBid - класс, описывающий заявки на реструктуризацию кредита      
-* Client - класс, описывающий клиента   
-* Manager - класс, описывающий менеджера
-* Financier - класс, описывающий финансиста   
-* SpecialOffer - класс, описывающий специальное предложение   
-* ResponceFinancier - класс, описывающий ответ финансиста   
-* Agreement - класс, описывающий договор    
+* [AllBid](https://github.com/Nikitina-Ann/design/blob/master/Bank/src/main/java/com/mycompany/bank/businessLogic/AllBid.java) - класс, описывающий заявки всех типов   
+* [Bid](https://github.com/Nikitina-Ann/design/blob/master/Bank/src/main/java/com/mycompany/bank/businessLogic/Bid.java) - класс, описывающий на получение кредита    
+* [RestrBid](https://github.com/Nikitina-Ann/design/blob/master/Bank/src/main/java/com/mycompany/bank/businessLogic/RestrBid.java) - класс, описывающий заявки на реструктуризацию кредита      
+* [Client](https://github.com/Nikitina-Ann/design/blob/master/Bank/src/main/java/com/mycompany/bank/businessLogic/Client.java) - класс, описывающий клиента   
+* [Manager](https://github.com/Nikitina-Ann/design/blob/master/Bank/src/main/java/com/mycompany/bank/businessLogic/Manager.java)- класс, описывающий менеджера
+* [Financier](https://github.com/Nikitina-Ann/design/blob/master/Bank/src/main/java/com/mycompany/bank/businessLogic/Financier.java)- класс, описывающий финансиста   
+* [SpecialOffer](https://github.com/Nikitina-Ann/design/blob/master/Bank/src/main/java/com/mycompany/bank/businessLogic/SpecialOffer.java) - класс, описывающий специальное предложение   
+* [ResponceFinancier](https://github.com/Nikitina-Ann/design/blob/master/Bank/src/main/java/com/mycompany/bank/businessLogic/ResponceFinancier.java) - класс, описывающий ответ финансиста   
+* [Agreement](https://github.com/Nikitina-Ann/design/blob/master/Bank/src/main/java/com/mycompany/bank/businessLogic/Agreement.java) - класс, описывающий договор    
 
 Так же был создан отдельный пакет для фасада (facade), в котором содержатся классы:
 
