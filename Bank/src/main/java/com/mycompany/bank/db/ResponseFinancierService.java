@@ -50,7 +50,10 @@ public class ResponseFinancierService {
         return new ResponseFinancier(answer, persent, time);
     }
 
-    public static void setResponseFinancier(Bid bid, int financier_id, Boolean answer, int persent, int time) {
+    public static Boolean setResponseFinancier(Bid bid, int financier_id, Boolean answer, int persent, int time) {
+        try{
+        ResponseFinancier responseFinancier = new ResponseFinancier(answer, persent, time);
+        bid.setResponseFinancier(responseFinancier);
         Sql2o sql2o = new Sql2o(db_url, dp_user, db_pass);
         String sql = "UPDATE responseFinancier set answer=:answer, persent=:persent, time=:time"
                 + " where bid_id=:bid_id and financier_id=:financier_id";
@@ -62,10 +65,15 @@ public class ResponseFinancierService {
                 .addParameter("persent", persent)
                 .addParameter("time", time)
                 .executeUpdate();
-        bid.setResponseFinancier(new ResponseFinancier(answer, persent, time));
+        return true;
+
+        } catch(Exception ex){    
+            return false;
+        }
     }
 
     public static ResponseFinancier getResponseFinancierByBidId(int bid_id) {
+        try{
         Sql2o sql2o = new Sql2o(db_url, dp_user, db_pass);
         String sql = "SELECT * FROM responseFinancier WHERE bid_id = :bid_id";
 
@@ -80,6 +88,9 @@ public class ResponseFinancierService {
         DBResponseFinancier dbResponseFinancier = list.get(0);
         ResponseFinancier responseFinancier = new ResponseFinancier(dbResponseFinancier.answer, dbResponseFinancier.persent, dbResponseFinancier.time);
         return responseFinancier;
+        }catch (Exception ex){
+            return null;
+        }
     }
 
     public static void setValue(int bid_id, int persent, int time) {

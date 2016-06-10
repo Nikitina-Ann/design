@@ -8,10 +8,7 @@ package com.mycompany.bank.db;
 import com.mycompany.bank.businessLogic.Financier;
 import org.sql2o.Connection;
 import org.sql2o.Sql2o;
-import java.sql.Date;
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Random;
 
 /**
  *

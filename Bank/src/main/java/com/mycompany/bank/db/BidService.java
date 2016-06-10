@@ -25,17 +25,25 @@ public class BidService {
     private static final String dp_user = "user";
     private static final String db_pass = "pass";
 
-    public static void createNewBid(int client_id, int sum) {
+    public static Boolean createNewBid(int client_id, int sum) {
+        try{
+            Client client = ClientService.getClientById(client_id);
+            Bid bid = client.newBid(1,new Date(), sum);
         Sql2o sql2o = new Sql2o(db_url, dp_user, db_pass);
         String sql = "INSERT INTO bids (client_id, manager_id, financier_id, date, responseClient, sum, agreement_id) "
                 + "VALUES ( :client_id,  :manager_id, NULL, now(), false, :sum, NULL)";
 
         Connection connection = sql2o.open();
-        connection.createQuery(sql)
+        int id = connection.createQuery(sql)
                 .addParameter("client_id", client_id)
                 .addParameter("manager_id", ManagerService.getRandomManager())
                 .addParameter("sum", sum)
-                .executeUpdate();
+                .executeUpdate().getKey(Integer.class);
+        bid.setId(id);
+        return true;
+        }catch(Exception ex){
+            return false;
+        }
     }
 
     public static Bid getBidById(int id) {

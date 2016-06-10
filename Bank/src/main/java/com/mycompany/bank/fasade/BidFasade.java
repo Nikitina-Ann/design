@@ -184,8 +184,8 @@ public class BidFasade {
     public void setFinancierId (int selectIndex, String  financierName){
     BidService.setFinancierId(getBidForBids(selectIndex),  financierName);
     }
-    public void setResponseFinancier(int selectIndex, int id, Boolean answer, int percent, int time){    
-    ResponseFinancierService.setResponseFinancier(getBidForBids(selectIndex), id, answer, percent, time);
+    public Boolean setResponseFinancier(int selectIndex, int id, Boolean answer, int percent, int time){    
+    return  ResponseFinancierService.setResponseFinancier(getBidForBids(selectIndex), id, answer, percent, time);
     } 
   
 }

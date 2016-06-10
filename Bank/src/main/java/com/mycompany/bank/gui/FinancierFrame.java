@@ -79,13 +79,16 @@ public class FinancierFrame extends JFrame {
                     int selectIndex;
                     if (tab == 0) {
                         selectIndex = table1.getSelectedRow();
-                        bidFasade.setResponseFinancier(selectIndex, id, answer, percent, time);
+                        if (!bidFasade.setResponseFinancier(selectIndex, id, answer, percent, time))
+                            JOptionPane.showMessageDialog(null, "Процент и время - от 0 до 100.");
+                        else            
+                            JOptionPane.showMessageDialog(null, "Ответ отправлен.");
                     }
                     if (tab == 1) {
                         selectIndex = table2.getSelectedRow();
-                        restrBidFasade.setResponseFinancier(selectIndex, answer, percent, time);
+                        restrBidFasade.setResponseFinancier(selectIndex, answer, percent, time);   
+                        JOptionPane.showMessageDialog(null, "Ответ отправлен.");
                     }
-                    JOptionPane.showMessageDialog(null, "Ответ отправлен.");
                 } catch (Exception nfe) {
                     JOptionPane.showMessageDialog(null, "Процент и время - числовые значения.");
                 }

@@ -85,8 +85,7 @@ public class Financier {
             return null;
         }
     }
-    
-        
+      
     public String getJobClient(String clientName) throws Exception {
     if (clientName.equals(""))
       return "";

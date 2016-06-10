@@ -26,8 +26,10 @@ public class CreateBidFrame extends javax.swing.JFrame {
             public void actionPerformed(ActionEvent e) {
                 try {
                     int sum = Integer.parseInt(sumField.getText());
-                    BidService.createNewBid(id, sum);
+                    if (BidService.createNewBid(id, sum))
                     JOptionPane.showMessageDialog(null, "Заявка успешно отправлено, ждите ответа финансиста.");
+                    else
+                    JOptionPane.showMessageDialog(null, "Сумма - положительное значение.");
                 } catch (NumberFormatException nfe) {
                     JOptionPane.showMessageDialog(null, "Введите сумму кредита (в рублях).");
                 }
