@@ -84,26 +84,36 @@
 
 Для классов слоя бизнесс-логики был создан отдельный пакет (businessLogic).
 Пакет содержит следующие классы    
-* AllBid - класс, описывающий заявки всех типов   
-* Bid - класс, описывающий на получение кредита    
-* RestrBid - класс, описывающий заявки на реструктуризацию кредита      
-* Client - класс, описывающий клиента   
-* Manager - класс, описывающий менеджера
-* Financier - класс, описывающий финансиста   
-* SpecialOffer - класс, описывающий специальное предложение   
-* ResponceFinancier - класс, описывающий ответ финансиста   
-* Agreement - класс, описывающий договор    
+* [AllBid](https://github.com/Nikitina-Ann/design/blob/master/Bank/src/main/java/com/mycompany/bank/businessLogic/AllBid.java) - класс, описывающий заявки всех типов   
+* [Bid](https://github.com/Nikitina-Ann/design/blob/master/Bank/src/main/java/com/mycompany/bank/businessLogic/Bid.java) - класс, описывающий на получение кредита    
+* [RestrBid](https://github.com/Nikitina-Ann/design/blob/master/Bank/src/main/java/com/mycompany/bank/businessLogic/RestrBid.java) - класс, описывающий заявки на реструктуризацию кредита      
+* [Client](https://github.com/Nikitina-Ann/design/blob/master/Bank/src/main/java/com/mycompany/bank/businessLogic/Client.java) - класс, описывающий клиента   
+* [Manager](https://github.com/Nikitina-Ann/design/blob/master/Bank/src/main/java/com/mycompany/bank/businessLogic/Manager.java)- класс, описывающий менеджера
+* [Financier](https://github.com/Nikitina-Ann/design/blob/master/Bank/src/main/java/com/mycompany/bank/businessLogic/Financier.java)- класс, описывающий финансиста   
+* [SpecialOffer](https://github.com/Nikitina-Ann/design/blob/master/Bank/src/main/java/com/mycompany/bank/businessLogic/SpecialOffer.java) - класс, описывающий специальное предложение   
+* [ResponceFinancier](https://github.com/Nikitina-Ann/design/blob/master/Bank/src/main/java/com/mycompany/bank/businessLogic/ResponceFinancier.java) - класс, описывающий ответ финансиста   
+* [Agreement](https://github.com/Nikitina-Ann/design/blob/master/Bank/src/main/java/com/mycompany/bank/businessLogic/Agreement.java) - класс, описывающий договор    
 
 Так же был создан отдельный пакет для фасада (facade), в котором содержатся классы:
 
-* BidFasade - фасад для работы с заявками на получение кредтита      
-* RestrBidFasade -  фасад для работы с заявками на реструктуризацию кредита          
-* ClientFasade -  фасад для работы с клиентами     
-* ManagerFasade -  фасад для работы с менеджерами    
-* FinancierFasade -  фасад для работы с финансистами      
-* SpecialOfferFasade -  фасад для работы со специальнми предложениями       
+* [BidFasade](https://github.com/Nikitina-Ann/design/blob/master/Bank/src/main/java/com/mycompany/bank/fasade/BidFasade.java) - фасад для работы с заявками на получение кредтита      
+* [RestrBidFasade](https://github.com/Nikitina-Ann/design/blob/master/Bank/src/main/java/com/mycompany/bank/fasade/RestrBidFasade.java) -  фасад для работы с заявками на реструктуризацию кредита          
+* [ClientFasade](https://github.com/Nikitina-Ann/design/blob/master/Bank/src/main/java/com/mycompany/bank/fasade/ClientFasade.java) -  фасад для работы с клиентами     
+* [ManagerFasade](https://github.com/Nikitina-Ann/design/blob/master/Bank/src/main/java/com/mycompany/bank/fasade/ManagerFasade.java) -  фасад для работы с менеджерами    
+* [FinancierFasade](https://github.com/Nikitina-Ann/design/blob/master/Bank/src/main/java/com/mycompany/bank/fasade/FinancierFasade.java) -  фасад для работы с финансистами      
+* [SpecialOfferFasade](https://github.com/Nikitina-Ann/design/blob/master/Bank/src/main/java/com/mycompany/bank/fasade/SpecialOfferFasade.java) -  фасад для работы со специальнми предложениями       
 
-Для проверки работоспособности бизнесс-логики были написаны JUnit - тесты. Так как на этапе создания бизнесс-логики, слой хранения еще не был реализован, то был созданы репозитории, эмулирующие работу слоя хранения.
+#Тестирование
+
+Для проверки работоспособности бизнесс-логики были написаны JUnit - тесты. Так как на этапе создания бизнесс-логики, слой хранения еще не был реализован, то был созданы репозитории, эмулирующие работу слоя хранения. Для этого был создан отдельный пакет repository, пакет включает следующие классы:     
+* [BidRepo](https://github.com/Nikitina-Ann/design/blob/master/Bank/src/main/java/com/mycompany/bank/repository/BidRepo.java)- репозиторий для работы с заявками на получение кредита      
+* [RestrBidRepo](https://github.com/Nikitina-Ann/design/blob/master/Bank/src/main/java/com/mycompany/bank/repository/RestrBidRepo.java)-   репозиторий  для работы с заявками на реструктуризацию кредита          
+* [ClientRepo](https://github.com/Nikitina-Ann/design/blob/master/Bank/src/main/java/com/mycompany/bank/repository/ClientRepo.java) -   репозиторий  для работы с клиентами     
+* [ManagerRepo](https://github.com/Nikitina-Ann/design/blob/master/Bank/src/main/java/com/mycompany/bank/repository/ManagerRepo.java) -   репозиторий  для работы с менеджерами    
+* [FinancierRepo](https://github.com/Nikitina-Ann/design/blob/master/Bank/src/main/java/com/mycompany/bank/repository/FinancierRepo.java) -   репозиторий  для работы с финансистами      
+* [SpecialOfferRepo](https://github.com/Nikitina-Ann/design/blob/master/Bank/src/main/java/com/mycompany/bank/repository/SpecialOfferRepo.java) -   репозиторий  для работы со специальнми предложениями       
+
+Используя данные репозитории были написаны JUnit тесты, реализующие возможные варианты использования.
 
 #Проектирование слоя хранения данных
 
@@ -111,40 +121,46 @@
 #Реализация слоя хранения данных
 
 В качестве СУБД было решено использовать MySQL в силу её удобства и бесплатности. Lля слоя хранения был создан отдельный пакет (services), в котором были созданы подпакеты (по аналогии с бизнесс-логикой). В состав пакета входят следующие классы:
-* BidService - класс, отвечающий за обращение к таблице с завками на получение кредита    
-* RestrBidService - класс, отвечающий за обращение к таблице я заявками на реструктуризацию кредита      
-* ClientService - класс, отвечающий за обращение к таблице с клиентами   
-* ManagerService - класс, отвечающий за обращение к таблице с менеджерами
-* FinancierService - класс, отвечающий за обращение к таблице с финансистами   
-* SpecialOfferService - класс, отвечающий за обращение к таблице со специальными предложениями     
-* ResponceFinancierService - класс, отвечающий за обращение к таблице с ответами финансиста     
-* AgreementService -класс, отвечающий за обращение к таблице с договорами       
+* [BidService](https://github.com/Nikitina-Ann/design/blob/master/Bank/src/main/java/com/mycompany/bank/db/BidService.java) - класс, отвечающий за обращение к таблице с завками на получение кредита    
+* [RestrBidService] (https://github.com/Nikitina-Ann/design/blob/master/Bank/src/main/java/com/mycompany/bank/db/RestrBidService.java) - класс, отвечающий за обращение к таблице я заявками на реструктуризацию кредита      
+* [ClientService] (https://github.com/Nikitina-Ann/design/blob/master/Bank/src/main/java/com/mycompany/bank/db/ClientService.java) - класс, отвечающий за обращение к таблице с клиентами   
+* [ManagerService](https://github.com/Nikitina-Ann/design/blob/master/Bank/src/main/java/com/mycompany/bank/db/ManagerService.java)  - класс, отвечающий за обращение к таблице с менеджерами
+* [FinancierService](https://github.com/Nikitina-Ann/design/blob/master/Bank/src/main/java/com/mycompany/bank/db/FinancierService.java)  - класс, отвечающий за обращение к таблице с финансистами   
+* [SpecialOfferService] (https://github.com/Nikitina-Ann/design/blob/master/Bank/src/main/java/com/mycompany/bank/db/SpecialOfferService.java) - класс, отвечающий за обращение к таблице со специальными предложениями     
+* [ResponceFinancierService](https://github.com/Nikitina-Ann/design/blob/master/Bank/src/main/java/com/mycompany/bank/db/ResponceFinancierService.java)  - класс, отвечающий за обращение к таблице с ответами финансиста     
+* [AgreementService](https://github.com/Nikitina-Ann/design/blob/master/Bank/src/main/java/com/mycompany/bank/db/AgreementService.java)  -класс, отвечающий за обращение к таблице с договорами       
 
 Так же были созданы соответствующие таблицы, для хранения сущностей.
 
-#Проектирование интеграции со сторонними сервисами и слоя представления
-##Слой представления
+#Проектирование слоя представления
 
 Для слоя представления было решено выделить отдельный пакет (gui). Общение между слоем представления и слоем бизнесс-логики происходит через фасады, описанне ранее.    
-##Проектирование интеграции со сторонними сервисами
+
+#Проектирование интеграции со сторонними сервисами
 
 В рамках работы было решено сделать 2 способа интеграции со сторонними сервисами:
 1.   Для получение данных о системе извне. Для этого было решено сделать сервис, выдающий список всех менеджеров системы.
 2.    Для подгрузки данных в систему. Для этого было решено создать текстовый файл, в котором, в формате json, будет хранится дополнительная информация о клиентах (должность на работе).
 
-#Реализация интеграции со сторонними сервисами и слоя представления
-##Реализация слоя представления
+#Реализация слоя представления
 
 Для классов, описывающих слой представления были создан отдельный пакет (gui). В пакете реализованы следующие классы:
-*   StartFrame - начально окно    
-*   ClientFrame - окно клиента  
-*   FinancierFrame - окно финансиста   
-*   ManagerFrame - окно менеджера   
-*   RegiastrationFrame -окно регистрации   
-*   CreateNewBidFrame - окно создания новой заявки на получение кредита (вызывается из окна клиента)   
-*   CreateSpecialOfferFrame - окно создания нового специльного предложения (вызывается из окно финансиста)  
+*   [StartFrame](https://github.com/Nikitina-Ann/design/blob/master/Bank/src/main/java/com/mycompany/bank/gui/StartFrame.java) - начально окно    
+*   [ClientFrame](https://github.com/Nikitina-Ann/design/blob/master/Bank/src/main/java/com/mycompany/bank/gui/ClientFrame.java) - окно клиента  
+*   [FinancierFrame](https://github.com/Nikitina-Ann/design/blob/master/Bank/src/main/java/com/mycompany/bank/gui/FinancierFrame.java) - окно финансиста   
+*   [ManagerFrame](https://github.com/Nikitina-Ann/design/blob/master/Bank/src/main/java/com/mycompany/bank/gui/ManagerFrame.java) - окно менеджера   
+*   [RegiastrationFrame](https://github.com/Nikitina-Ann/design/blob/master/Bank/src/main/java/com/mycompany/bank/gui/RegiastrationFrame.java) -окно регистрации   
+*   [CreateNewBidFrame](https://github.com/Nikitina-Ann/design/blob/master/Bank/src/main/java/com/mycompany/bank/gui/CreateNewBidFrame.java) - окно создания новой заявки на получение кредита (вызывается из окна клиента)   
+*   [CreateSpecialOfferFrame](https://github.com/Nikitina-Ann/design/blob/master/Bank/src/main/java/com/mycompany/bank/gui/CreateSpecialOfferFrame.java)- окно создания нового специльного предложения (вызывается из окно финансиста)       
 
-##Реализация интеграции со сторонними сервисами
+На рисунках ниже представлены скриншоты графического интерфейса.    
+[Начальное окно] (https://github.com/Nikitina-Ann/design/blob/master/pngFrame/StartFrame.png)   
+[Окно клиента] (https://github.com/Nikitina-Ann/design/blob/master/pngFrame/ClientFrame.png)    
+[Окно финансиста] (https://github.com/Nikitina-Ann/design/blob/master/pngFrame/FinancierFrame.png)   
+[Окно менеджера] (https://github.com/Nikitina-Ann/design/blob/master/pngFrame/ManagerFrame.png)   
+[Окно регистрации] (https://github.com/Nikitina-Ann/design/blob/master/pngFrame/RegistrationFrame.png)     
+
+#Реализация интеграции со сторонними сервисами
 
 Для реализации слоя, отвечающего за выдачу информации о назначенном времени был создан отдельный класс HttpServer. Для передачи данных, использовался протокол HTTP. Данные передаются в формате json. В процессе работы сервер слушает порт 8080, и при установлении соединения, отправляет строку с данными. Ниже приведен пример получаемой строки:
 
@@ -165,7 +181,9 @@
 Для чтение файла, поиск необходимой информации и выдачу информации отвечаeт класс:
 ClientService - класс, осуществляющий разбор файла и выдачу соответствующий информации.
 
-Заключение
+
+
+#Заключение
 
 В рамках данного курса были изучены принципы разработки архитектуры программного обеспечения, а так же, следуя этим принципам, было разработано приложение. в приложении было создано три слоя:   
 
